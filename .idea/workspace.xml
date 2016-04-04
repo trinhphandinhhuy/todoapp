@@ -159,7 +159,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/Downloads/uyen" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testgit" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -229,7 +229,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="91" y="-1058" width="1696" height="1026" extended-state="7" />
+    <frame x="91" y="-1058" width="1696" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12440476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
