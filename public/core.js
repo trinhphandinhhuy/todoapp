@@ -25,6 +25,9 @@ function mainController($scope, $http) {
                 console.log('Error: ' + data);
             });
     };
+    
+    //double click to edit todos
+    
 
     //deleting a todos after checking it
     $scope.deleteTodo = function(id) {

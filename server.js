@@ -63,6 +63,23 @@ app.post('/api/todos', function(req, res){
     });
 });
 
+//--------------Edit todos item
+
+app.put('/api/todos/:todo_id', function(req, res){
+    var query = {_id : req.params.todo_id};
+    var update = {text: req.body.text };
+    Todo.update(query, update, function(err, doc){
+        if(err) res.send(err);
+        //if no errors
+
+        Todo.find(function(err, todos){
+            if(err) res.send(err);
+            //if no error
+            res.json(todos);
+        });
+    });
+});
+
 //----- Deleting a todos item
 
 app.delete('/api/todos/:todo_id', function(req, res){

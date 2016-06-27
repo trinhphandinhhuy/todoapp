@@ -2,7 +2,7 @@
 <html ng-app="huyTodo">
 <head>
     <meta charset="UTF-8">
-    <title>First MEAN App</title>
+    <title>Huy's todo list</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
     <style>
@@ -32,11 +32,12 @@
 
     <!-- Todo list -->
     <div class="row" id="todo-list">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-8 col-sm-offset-2">
             <!-- Loop over the todos in $scope.todos -->
             <div class="checkbox" ng-repeat="todo in todos">
                 <label for=""></label>
-                    <input id="cb" type="checkbox" ng-click="deleteTodo(todo._id)"><h2>{{todo.text}}</h2>
+                    <input id="cb" type="checkbox" ng-click="deleteTodo(todo._id)">
+                    <h2>{{todo.text}}</h2>
                 
             </div>
         </div>
