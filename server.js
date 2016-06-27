@@ -14,7 +14,14 @@ var methodOverride = require('method-override');
 
 //--------- Configuration ----//
 
-mongoose.connect('mongodb://localhost/todoapp');
+//mongoose.connect('mongodb://localhost/todoapp');
+mongoose.connect('mongodb://huytrinh:lanvadiep@ds015774.mlab.com:15774/todolistapp', function(err, res){
+    if(err) {
+       console.log(err);
+       process.exit(1);
+    }
+    console.log(res);
+});
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));

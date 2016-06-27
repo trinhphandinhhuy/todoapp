@@ -9,6 +9,14 @@
         html                    { overflow-y:scroll; }
         body                    { padding-top:50px; }
         #todo-list              { margin-bottom:30px; }
+        #cb                     {   width: 25px;
+                                    height: 25px;
+                                    
+                                    left: 0;
+                                    
+                                    position: absolute;
+                                    cursor: pointer;}
+        
     </style>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
@@ -19,7 +27,7 @@
 <div class="container">
     <!--- header --->
     <div class="jumbotron text-center">
-        <h1>You have <span class="label label-info">{{todos.length}}</span> thing(s) to do.</h1>
+        <h1>I have <span class="label label-info">{{todos.length}}</span> thing(s) to do.</h1>
     </div>
 
     <!-- Todo list -->
@@ -27,10 +35,9 @@
         <div class="col-sm-4 col-sm-offset-4">
             <!-- Loop over the todos in $scope.todos -->
             <div class="checkbox" ng-repeat="todo in todos">
-                <label for="">
-                    <input type="checkbox" ng-click="deleteTodo(todo._id)">{{todo.text}}
-                </label>
-
+                <label for=""></label>
+                    <input id="cb" type="checkbox" ng-click="deleteTodo(todo._id)"><h2>{{todo.text}}</h2>
+                
             </div>
         </div>
     </div>
@@ -41,7 +48,7 @@
             <form action="">
                 <div class="form-group">
                     <!-- Bind the value to formData.text-->
-                    <input type="text" class="form-control input-lg text-center" placeholder="Type something you want to do" ng-model="formData.text">
+                    <input type="text" class="form-control input-lg text-center" placeholder="What I should do..." ng-model="formData.text">
                 </div>
                 <!-- createTodo() will create new todos-->
                 <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()"> Add </button>
